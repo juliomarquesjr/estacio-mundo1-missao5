@@ -51,7 +51,11 @@ nuvem_palavras.imshow(wordcloud, interpolation='bilinear')
 nuvem_palavras.axis("off")
 nuvem_palavras.show()
 
-### Gerando imagem com Nuvem de palavras
+### Gerando imagem com histograma
 histori = plt
+histori.title("Histograma das Pontuações")
 histori.hist(lista_pontos, bins=10)
+histori.axis('on')
+histori.xlabel("Pontos")
+histori.ylabel("Probabilidades")
 histori.show()
