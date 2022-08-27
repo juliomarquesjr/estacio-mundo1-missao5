@@ -37,7 +37,7 @@ for valores in texto:
     lista_palavras.append(retornaNumero(int(temp[1])))
     lista_pontos.append(int(temp[1]))
 
-# Montando os gráficos
+### Montando os gráficos
 wordcloud = WordCloud().generate(str(lista_palavras).replace("'", ""))
 nuvem_palavras = plt
 nuvem_palavras.title("Nuvem de Palavras")
@@ -45,11 +45,11 @@ nuvem_palavras.imshow(wordcloud, interpolation='bilinear')
 nuvem_palavras.axis("off")
 nuvem_palavras.show()
 
-histori = plt
-histori.title("Histograma das Pontuações")
-histori.hist(lista_pontos, bins=10, density=True, facecolor="blue", alpha=0.75)
-histori.grid(True)
-histori.axis('on')
-histori.xlabel("Pontos")
-histori.ylabel("Probabilidades")
-histori.show()
+hist = plt
+hist.title("Histograma das Pontuações")
+hist.hist(lista_pontos, bins=10, density=True, facecolor="blue", alpha=0.75)
+hist.grid(True)
+hist.axis('on')
+hist.xlabel("Pontos")
+hist.ylabel("Probabilidades")
+hist.show()
